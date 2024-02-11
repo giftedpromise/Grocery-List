@@ -8,11 +8,29 @@
   </head>
   <body>
     <div class="container">
-      <img src="shoppingcart.png" alt="shopping cart" />
-      <input type="text" id="input-field" placeholder="Bread" />
-      <button id="add-button">Add to cart</button>
-      <ul id="shopping-list"></ul>
-      <script src="script.js"></script>
+      <h1>GROCERY LIST</h1>
+      <div class="input">
+        <div class="column1">
+          <input type="text" id="input-field" placeholder="Bread" />
+          <button id="add-button">Add to cart</button>
+          <ul id="shopping-list"></ul>
+        </div>
+        <div class="column1">
+          <input type="text" id="input-field" placeholder="Qty" />
+          <button id="add-button">Add Quantity</button>
+          <ul id="shopping-list"></ul>
+        </div>
+        <div class="column1">
+          <input type="text" id="input-field" placeholder="Amount" />
+          <button id="add-button">Add Price</button>
+          <ul id="shopping-list"></ul>
+        </div>
+      </div>
+      <div class="tatal-col">
+        <button>Total</button>
+        <h3>10,000</h3>
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
