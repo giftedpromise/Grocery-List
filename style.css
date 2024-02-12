@@ -16,13 +16,21 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 320px;
-  margin: 30px auto;
+
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  justify-content: center;
+  text-align: center;
 }
 
 .input {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 1rem;
 }
 input {
   color: #432000;
