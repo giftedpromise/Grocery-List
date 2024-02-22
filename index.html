@@ -8,27 +8,51 @@
   </head>
   <body>
     <div class="container">
-      <h1>GROCERY LIST</h1>
-      <div class="input">
-        <div class="column1">
-          <input type="text" id="input-field" placeholder="Bread" />
-          <button id="add-button">Add to cart</button>
-          <ul id="shopping-list"></ul>
-        </div>
-        <div class="column1">
-          <input type="text" id="input-field" placeholder="Qty" />
-          <button id="add-button">Add Quantity</button>
-          <ul id="shopping-list"></ul>
-        </div>
-        <div class="column1">
-          <input type="text" id="input-field" placeholder="Amount" />
-          <button id="add-button">Add Price</button>
-          <ul id="shopping-list"></ul>
-        </div>
+      <div class="title-sec">
+        <h2>Grocery List</h2>
+
+        <img src="icon.png" alt="" style="width: 40px" />
       </div>
-      <div class="tatal-col">
-        <button>Total</button>
-        <h3>10,000</h3>
+      <div class="total-section">
+        <p id="totalAmount">Total</p>
+        <h2 id="totalAmountSect">₦ 0</h2>
+      </div>
+
+      <div class="add-item">
+        <p>Add New Item</p>
+        <hr />
+      </div>
+      <div class="item-details">
+        <label for="inputTitle" class="inputName">Item Name</label>
+        <input
+          type="text"
+          id="inputTitle"
+          class="inputTitle"
+          placeholder="Enter Item Name...."
+        />
+      </div>
+      <div class="amount-details">
+        <label for="inputAmount" class="inputName">Amount</label> <br />
+        <input
+          type="number"
+          id="inputAmount"
+          class="inputTitleA"
+          placeholder="Enter amount...."
+        />
+      </div>
+      <div class="input-quantity">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1" />
+      </div>
+      <div class="btnAdd">
+        <button type="submit" id="transaction-btn" class="transaction-btn">
+          Add Transaction
+        </button>
+      </div>
+      <div class="history-section">
+        <h2>Transaction History</h2>
+        <hr />
+        <ul class="list" id="list"></ul>
       </div>
     </div>
     <script src="script.js"></script>
