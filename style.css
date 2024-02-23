@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(grocery.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  background-color: white;
+  max-width: 400px;
+  padding-top: 2rem;
+  margin: 3rem auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
+
+  padding: 0.25rem 1rem;
+}
+
+.title-sec {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.title-sec img {
+  margin-right: 20px; /* Or adjust margin based on your layout */
+  height: 40px;
+}
+
+.title-sec h2 {
+  text-align: center;
+  color: purple;
+  font-weight: 600;
+}
