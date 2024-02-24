@@ -52,7 +52,6 @@ function updateTotalAmount() {
   // Display the updated total amount in the UI
   totalAmountEl.textContent = `₦ ${newTotalAmount.toFixed(2)}`;
 }
-
 function addItemToList(newItem) {
   // Create a new list item
   const listItem = document.createElement("li");
@@ -62,16 +61,27 @@ function addItemToList(newItem) {
     <span class="descriptionInput">${newItem.name}</span>
     <span class="qty">${newItem.quantity}</span>
     <span class="subTotal">${newItem.subTotal.toFixed(2)}</span>
-    <button class="btnDelete" onClick="deleteItem(${newItem.id})">X</button>
+    <button class="btnDelete">X</button>
   `;
 
   // Append the list item to the transaction history list
   listEl.appendChild(listItem);
 }
 
+listEl.addEventListener("click", function (event) {
+  if (event.target.classList.contains("btnDelete")) {
+    const itemId = event.target.closest("li").getAttribute("data-id");
+    deleteItem(itemId);
+  }
+});
+
 function deleteItem(id) {
+  console.log("Deleting item with ID:", id);
+
   // Remove the item from the array based on the provided ID
-  const indexToRemove = itemsArray.findIndex((item) => item.id === id);
+  const indexToRemove = itemsArray.findIndex((item) => item.id == id);
+  console.log("Index to remove:", indexToRemove);
+
   if (indexToRemove !== -1) {
     itemsArray.splice(indexToRemove, 1);
   }
@@ -83,5 +93,14 @@ function deleteItem(id) {
   const listItem = document.querySelector(`li[data-id="${id}"]`);
   if (listItem) {
     listItem.remove();
+  } else {
+    console.log("List item not found:", id);
   }
 }
+
+listEl.addEventListener("click", function (event) {
+  if (event.target.classList.contains("btnDelete")) {
+    const itemId = event.target.closest("li").getAttribute("data-id");
+    deleteItem(itemId);
+  }
+});
