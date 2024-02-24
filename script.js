@@ -14,9 +14,16 @@ let itemId = 0; // Variable to assign unique IDs to each item
 addItemBtnEl.addEventListener("click", function (event) {
   event.preventDefault();
 
-  const itemName = inputFieldEl.value;
+  const itemName = inputFieldEl.value.trim();
   const amount = parseFloat(inputAmountEl.value) || 0; // Parse as float or default to 0
   const quantity = parseInt(inputQuantityEl.value) || 1; // Parse as integer or default to 1
+
+  // Check if all required fields are filled
+  if (!itemName || isNaN(amount) || isNaN(quantity)) {
+    alert("Please fill in all required fields.");
+    return;
+  }
+
   // Calculate total amount for the item
   const subTotalAmount = amount * quantity;
 
